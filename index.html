@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="a" width="800" height="800"></canvas>
+		<script type="text/javascript">
+			var crv=document.getElementById("a")
+			var  c=crv.getContext("2d")
+		
+			setTimeout("x1()",2000)
+			c.beginPath()
+			c.moveTo(300,150)
+			c.quadraticCurveTo(0,50,300,400)
+			c.fillStyle="red"
+			c.fill()
+			c.stroke()
+			//============
+			c.moveTo(300,150)
+			c.quadraticCurveTo(600,50,300,400)
+			c.fillStyle="red"
+			c.fill()
+			c.stroke()
+			c.closePath()
+			function x1(){
+			c.clearRect(0,0,400,400)
+			c.beginPath()
+			c.moveTo(280,150)
+			c.quadraticCurveTo(0,50,300,400)
+			c.fillStyle="gray"
+			c.fill()
+			c.stroke()
+			//============
+			c.moveTo(300,150)
+			c.quadraticCurveTo(600,50,300,400)
+			c.fillStyle="gray"
+			c.fill()
+			c.stroke()
+			c.closePath()
+			
+			}
+			
+		</script>
+	</body>
+</html>
